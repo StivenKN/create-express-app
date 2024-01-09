@@ -1,5 +1,5 @@
 {
-  "name": "create-express-app-project",
+  "name": "create-express-restapi",
   "version": "1.0.0",
   "description": "Create a minimal express app with a simple command.",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "start:tsc": "tsc --watch"
   },
   "bin": {
-    "create-express-app-project": "./bin/createProject.js"
+    "create-express-restapi": "./bin/createProject.js"
   },
   "keywords": ["create", "express", "api-rest", "apirest", "backend", "node", "javascript"],
   "author": "conangh",
