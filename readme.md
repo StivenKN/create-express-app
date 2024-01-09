@@ -9,7 +9,11 @@ This project is not related to Express, it is an open source package.
 ## Usage
 
 ```bash
-npm create express-app-project
+npm create express-restapi@latest
+```
+Or
+```bash
+npx create-express-restapi@latest
 ```
 
 # Features

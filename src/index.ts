@@ -15,7 +15,7 @@ import { existsSync } from 'fs'
   .catch(() => {doSomething...})
  * @author ConanGH-S
  */
-const askProjectName = async (): Promise<string> => {
+export const askProjectName = async (): Promise<string> => {
   let projectName: string
   do {
     projectName = await prompt.prompt(`${colors.blue('?')} Application name: ${colors.gray('->')} `, { default: 'express-app', trim: true })
