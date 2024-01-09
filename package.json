@@ -1,9 +1,12 @@
 {
   "name": "create-express-restapi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create a minimal express app with a simple command.",
   "main": "index.js",
-  "files": ["dist/", "bin/"],
+  "files": [
+    "dist/",
+    "bin/"
+  ],
   "scripts": {
     "start": "node dist/index.js",
     "start:dev": "nodemon dist/index.js",
@@ -12,7 +15,15 @@
   "bin": {
     "create-express-restapi": "./bin/createProject.js"
   },
-  "keywords": ["create", "express", "api-rest", "apirest", "backend", "node", "javascript"],
+  "keywords": [
+    "create",
+    "express",
+    "api-rest",
+    "apirest",
+    "backend",
+    "node",
+    "javascript"
+  ],
   "author": "conangh",
   "license": "ISC",
   "preferGlobal": true,
@@ -20,15 +31,16 @@
     "@types/node": "^20.10.7",
     "@types/promptly": "3.0.5",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
-    "colors": "1.4.0",
     "eslint": "^8.0.1",
     "eslint-config-standard-with-typescript": "^43.0.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
     "eslint-plugin-promise": "^6.0.0",
     "nodemon": "^3.0.2",
-    "promptly": "3.2.0",
     "typescript": "5.3.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "colors": "1.4.0",
+    "promptly": "3.2.0"
+  }
 }
