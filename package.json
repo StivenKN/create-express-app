@@ -1,6 +1,6 @@
 {
   "name": "create-express-restapi",
-  "version": "1.0.3",
+  "version": "1.0.31",
   "description": "Create a minimal express app with a simple command.",
   "main": "index.js",
   "files": [
