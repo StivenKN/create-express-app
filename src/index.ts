@@ -6,8 +6,14 @@ import { existsSync } from 'fs'
 import { createInterface } from 'readline'
 
 /**
- * Interface required by node and cmd to ask project name every time is needed and start to build the expected project
+ * Abort controller variable if cancelled
  */
+const ac = new AbortController()
+const signal = ac.signal
+
+/**
+ * Interface required by node and cmd to ask project name every time is needed and start to build the expected project
+*/
 const rl = createInterface({
   input: process.stdin,
   output: process.stdout
@@ -24,7 +30,6 @@ const rl = createInterface({
  */
 export const askProjectName = async (): Promise<string> => {
   return await new Promise((resolve) => {
-    // let projectName: string = 'express-app'
     rl.question(`${colors.blue('?')} Application name: ${colors.gray('->')} `, (response: string) => {
       do {
         if (existsSync(response)) console.warn(colors.yellow('! Warning: ') + 'The project name already exists, please choose another one' + '\n')
@@ -62,3 +67,10 @@ askProjectName()
   .catch((error) => {
     console.error(error)
   })
+
+/**
+ * If the user abort create the app, show a message
+ */
+signal.addEventListener('abort', () => {
+  console.log('Process ended')
+}, { once: true })
