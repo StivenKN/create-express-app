@@ -1,28 +1,33 @@
 {
-  "name": "express-api-generator",
+  "name": "express-app-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "Create a minimal express app with a simple command.",
   "main": "index.js",
   "scripts": {
     "start": "node dist/index.js",
     "start:dev": "nodemon dist/index.js",
     "start:tsc": "tsc --watch"
   },
-  "keywords": [],
-  "author": "",
+  "bin": {
+    "express-app-project": "./bin/createProject.js"
+  },
+  "keywords": ["create", "express", "api-rest", "apirest", "backend", "node", "javascript"],
+  "author": "conangh",
   "license": "ISC",
+  "preferGlobal": true,
   "devDependencies": {
     "@types/node": "^20.10.7",
+    "@types/promptly": "3.0.5",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "colors": "1.4.0",
     "eslint": "^8.0.1",
     "eslint-config-standard-with-typescript": "^43.0.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
     "eslint-plugin-promise": "^6.0.0",
     "nodemon": "^3.0.2",
+    "promptly": "3.2.0",
     "typescript": "5.3.3"
   },
-  "dependencies": {
-    "colors": "1.4.0"
-  }
+  "dependencies": {}
 }
