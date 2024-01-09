@@ -1,6 +1,11 @@
+/**
+ * Content for index.js
+ * @author ConanGH-S
+ */
 export default `import express from 'express'
 import cors from 'cors'
 import cookieParser from 'cookie-parser'
+import userRouter from './routes/user.routes.js'
 
 const app = express()
 
@@ -17,7 +22,9 @@ app.use(express.json())
 
 app.use(cookieParser())
 
-const API = '/api'
+const PREFIX = '/api/v1'
+
+app.use(PREFIX, userRouter)
 
 app.use((_req, res) => {
   const errorMessage = 'ROUTE_NOT_FOUND'

@@ -4,7 +4,13 @@ import createFolder from './createFolder'
 import dataToCreate from './dataToCreate'
 import appData from '../data/app.data'
 
-const createAppStructure = async (currentLocation: string): Promise<any> => {
+/**
+ * Contains all the structure to create the app, this is the core of the bundle
+ * @param {string} currentLocation
+ * @returns {Promise<void>}
+ * @author ConanGH-S
+ */
+const createAppStructure = async (currentLocation: string): Promise<void> => {
   const { files, folders, srcStructure } = dataToCreate
   const folderPath = path.join(currentLocation, folders)
   try {
@@ -13,12 +19,12 @@ const createAppStructure = async (currentLocation: string): Promise<any> => {
     }
 
     createFolder(folderPath)
-    createFile(folderPath, 'app.js', appData)
+    createFile(folderPath, 'index.js', appData)
     createFile(folderPath, '.env', '')
 
     for (const src of srcStructure) {
       createFolder(path.join(folderPath, src.folderName))
-      createFile(path.join(folderPath, src.folderName), src.folderFile, '')
+      createFile(path.join(folderPath, src.folderName), src.folderFile.name, src.folderFile.content)
     }
   } catch (error) {
     console.error(error)

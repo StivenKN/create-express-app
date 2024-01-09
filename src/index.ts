@@ -39,7 +39,7 @@ askProjectName()
       createAppStructure(location).then(() => {
         console.info(colors.green('Run: ') + colors.yellow(`cd ${location}`))
         console.info(colors.green('Run: ') + colors.yellow('npm install') + colors.green(' to install dependencies'))
-        console.info(colors.green('Run: ') + colors.yellow('npm start') + colors.green(' to initializate the app'))
+        console.info(colors.green('Run: ') + colors.yellow('npm start or npm start:dev') + colors.green(' to initializate the app'))
         process.exit(0)
       })
         .catch((err: string) => {

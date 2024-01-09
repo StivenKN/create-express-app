@@ -1,6 +1,11 @@
+/**
+ * Content for package.json
+ * @author ConanGH-S
+ */
 export default `{
   "name": "my-app",
   "version": "0.0.1",
+  "type": "module",
   "description": "",
   "scripts": {
     "start": "node src/index.js",
@@ -10,14 +15,14 @@ export default `{
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^3.0.2"
+    "nodemon": "latest"
   },
   "dependencies": {
-    "bcrypt": "^5.0.1",
-    "cookie-parser": "^1.4.6",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "jsonwebtoken": "^8.5.1"
+    "bcrypt": "latest",
+    "cookie-parser": "latest",
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "jsonwebtoken": "latest"
   }
 }`
