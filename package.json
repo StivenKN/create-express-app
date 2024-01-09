@@ -7,6 +7,15 @@
     "dist/",
     "bin/"
   ],
+  "bugs": {
+    "url": "https://github.com/ConanGH-S/create-express-app/issues",
+    "email": "blandon0207s@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ConanGH-S/create-express-app.git"
+  },
+  "homepage": "https://github.com/ConanGH-S/create-express-app",
   "scripts": {
     "start": "node dist/index.js",
     "start:dev": "nodemon dist/index.js",
