@@ -1,15 +1,16 @@
 {
-  "name": "express-app-project",
+  "name": "create-express-app-project",
   "version": "1.0.0",
   "description": "Create a minimal express app with a simple command.",
   "main": "index.js",
+  "files": ["dist/", "bin/"],
   "scripts": {
     "start": "node dist/index.js",
     "start:dev": "nodemon dist/index.js",
     "start:tsc": "tsc --watch"
   },
   "bin": {
-    "express-app-project": "./bin/createProject.js"
+    "create-express-app-project": "./bin/createProject.js"
   },
   "keywords": ["create", "express", "api-rest", "apirest", "backend", "node", "javascript"],
   "author": "conangh",
